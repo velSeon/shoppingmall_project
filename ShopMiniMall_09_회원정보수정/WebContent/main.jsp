@@ -1,0 +1,31 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+<%
+   String mesg1 = (String)session.getAttribute("mesg");
+   String  mesg2 = (String)session.getAttribute("memberAdd");
+   if(mesg1!=null){
+%>
+   <script type="text/javascript">
+     alert('<%=mesg1%>');
+   </script>
+<%
+   }
+%>
+<h1>Main 화면입니다.</h1>
+<jsp:include page="common/top.jsp" flush="false" /><br>
+<jsp:include page="common/menu.jsp" flush="false" />
+<hr>
+<jsp:include page="goods/goodsList.jsp" flush="false" />
+
+</body>
+</html>
+
+
+
