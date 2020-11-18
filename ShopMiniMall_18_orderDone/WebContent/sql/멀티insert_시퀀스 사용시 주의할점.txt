@@ -1,0 +1,7 @@
+   CREATE OR REPLACE FUNCTION orderSeq
+    RETURN number
+    IS
+    BEGIN
+      RETURN orderInfo_seq.nextval;
+    END;
+    /
